@@ -10,6 +10,7 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())  // req.body madhe data takayche kam
+app.use(express.static("public"))
 
 app.use("/api/admin", require("./routes/admin.routes"))
 app.use("/api/auth", require("./routes/auth.routes"))
